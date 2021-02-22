@@ -11,7 +11,6 @@ router.route('/').post((req,res)=>{
         res.json(response);
       })
 })
-
 router.route('/post').post((req,res)=>{
    numbersArr[0] = req.body.tosend;
    numbersArr[1] = '6306363669';
