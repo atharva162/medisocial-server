@@ -27,8 +27,7 @@ router.route('/add').post((req, res) =>{
         doc.forEach(userdetails=>{
             numbersArr.push(userdetails.username)
         })
-        var options = {authorization : apikey , message : `A user named ${req.body.username} has added a medicine named ${req.body.title}
-        By:- MediSocial` ,  numbers : numbersArr}
+        var options = {authorization : apikey , message : `A restaurant named ${req.body.username} has some left-over food which you might want to collect` ,  numbers : numbersArr}
         fast2sms.sendMessage(options).then(response=>{
             console.log(response)
             res.json(response);
