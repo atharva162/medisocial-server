@@ -14,8 +14,7 @@ router.route('/').post((req,res)=>{
 router.route('/post').post((req,res)=>{
    numbersArr[0] = req.body.tosend;
    numbersArr[1] = '6306363669';
-   var options = {authorization : apikey , message : `A shop named ${req.body.name} with contact number ${req.body.phone} and address ${req.body.address} has connected with you for your medicine named ${req.body.medicine}, maybe the shopkeeper has this medicine you can try contacting the shopkeeper.
-   By:- MediSocial` ,  numbers : numbersArr}
+   var options = {authorization : apikey , message : `An NGO named ${req.body.name} with contact number ${req.body.phone} and address ${req.body.address} is interested in collecting your left over food.` ,  numbers : numbersArr}
    fast2sms.sendMessage(options).then(response=>{
     console.log(response)
     res.json(response);
